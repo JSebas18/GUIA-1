@@ -342,6 +342,9 @@ switch(signo){
     case "/":
         cal2.division();
         texto3.setText(Float.toString(cal2.result));
+        if(cal2.num2==0){
+                texto3.setText("No se pueden realizar divisiones por cero");
+            }
     break;
      case "Iva":
         cal2.iva();

@@ -70,6 +70,9 @@ public class Consola {
             cal1.num2=b;
             cal1.division();
             System.out.println("La division es: " + cal1.result);
+              if(cal1.num2==0){
+               System.out.println("No se pueden realizar divisiones por cero");
+            }
             break;
             case 5: 
             System.out.print("Ingrese el primer numero: ");
@@ -100,6 +103,9 @@ public class Consola {
              b= ingreso.nextFloat();
             cal1.num2=b;
             cal1.raiz();
+            if(cal1.num1<0){
+                System.out.println("Es un numero imaginario");
+            }
             System.out.println("La raiz es: " + cal1.result);
             break;
             case 9: 
