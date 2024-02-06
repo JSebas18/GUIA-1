@@ -20,12 +20,15 @@ public void division(){
     result=num1/num2;
 }
 public void sen(double a){
-   result=(float)Math.sin(a);
+    a = Math.toRadians(a); 
+    result=(float)Math.sin(a);
 }
 public void cos(double a){
+    a = Math.toRadians(a); 
     result=(float)Math.cos(a);
 }
 public void tan(double a){
+    a = Math.toRadians(a); 
     result=(float)Math.tan(a);
 }
 public void iva(){
