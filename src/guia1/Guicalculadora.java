@@ -4,73 +4,12 @@ package guia1;
 
 public class Guicalculadora extends javax.swing.JFrame {
 String signo;
-String funcion="";
-double r;
+
+
    // nombre de la clase + nombre del objeto = new + constructor();
     Calculadora cal2= new Calculadora();
     public Guicalculadora() {
         initComponents();
-    setSinButtonAction();
-    setCosButtonAction();
-    setTanButtonAction();
-    setEqualButtonAction();
-    }
-
-  public void setCosButtonAction() {
-        jButton21.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                funcion = "cos";
-            }
-        });
-    }
-
-    public void setTanButtonAction() {
-        jButton19.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                funcion = "tan";
-            }
-        });
-    }
-
-    public void setSinButtonAction() {
-    jButton3.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            funcion = "sin";
-        }
-    });
-}
-    public void setEqualButtonAction() {
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                
-                if (!funcion.isEmpty()) {
-                    // Aquí debes reemplazar "numeroIngresado" con la variable que almacena el número ingresado
-                    double resultado;
-                    switch (funcion) {
-                        case "sin":
-                             r=Double.parseDouble(texto3.getText());
-                            cal2.sen(r);
-                             texto3.setText(String.valueOf(cal2.result));
-                            break;
-                        case "cos":
-                             r=Double.parseDouble(texto3.getText());
-                            cal2.cos(r);
-                            texto3.setText(String.valueOf(cal2.result));
-                            break;
-                        case "tan":
-                             r=Double.parseDouble(texto3.getText());
-                            cal2.tan(r);
-                             texto3.setText(String.valueOf(cal2.result));
-                            break;
-                        default:
-                            resultado = 0;
-                            break;
-                    }
-                    texto3.setText(String.valueOf(cal2.result));
-                    funcion = "";
-                }
-            }
-        });
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -415,7 +354,9 @@ switch(signo){
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-  
+double r=Double.parseDouble(texto3.getText());
+        cal2.sen(r);
+        texto3.setText(String.valueOf(cal2.result));    
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
@@ -495,9 +436,9 @@ texto3.setText("");
     }//GEN-LAST:event_jButton20ActionPerformed
 
     private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
- double r=Double.parseDouble(texto3.getText());
+double r=Double.parseDouble(texto3.getText());
         cal2.cos(r);
-        texto3.setText(String.valueOf(cal2.result));   
+        texto3.setText(String.valueOf(cal2.result));      
     }//GEN-LAST:event_jButton21ActionPerformed
 
     private void jButton23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton23ActionPerformed
