@@ -35,7 +35,7 @@ public void iva(){
     result=num1*num2/100;
 }
 public void raiz(){
-   result=(float) Math.sqrt(num1);
+   result=(float) Math.pow(num1,1/num2);
 }
 public void pow(){
    result=(float) Math.pow(num1,num2);
